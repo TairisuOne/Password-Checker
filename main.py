@@ -31,10 +31,13 @@ def password_checker(password):
         issues.append("Password must contain at least one special character.")
 
     elif has_uppercase and has_lowercase and has_digit and has_special and len(password) >= 8:
-        return "Strong Password: password meets all criteria"
+        return "Strong Password: password meets all criteria", []
 
+    return "Weak password", issues
 
-print(password_checker(password))
+strength, issues = password_checker(password)
+
+print("Strenght: ", strength)
 
 for x in issues:
     print("Suggestions - ", x)
