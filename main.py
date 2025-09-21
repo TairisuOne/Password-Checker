@@ -1,7 +1,7 @@
 
 special_char = "!@#$%^&*()<>?,.:;"
 
-password = input("Enter a password: ")
+password = input("Enter a password to check strength: ")
 
 has_uppercase = any(char.isupper() for char in password)
 
