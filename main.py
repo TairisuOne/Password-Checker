@@ -1,9 +1,11 @@
 
 special_char = "!@#$%^&*()<>?,.:;"
+issues = []
 
 password = input("Enter a password to check strength: ")
 
 def password_checker(password):
+
 
     has_uppercase = any(char.isupper() for char in password)
 
@@ -14,9 +16,24 @@ def password_checker(password):
     has_special = any(char in special_char for char in password)
 
     if len(password) < 8:
-        return"Weak Password: too short"
+        issues.append("Weak Password: too short. Must me a minimum of 8 characters long.")
+
+    if not has_uppercase:
+        issues.append("Password must contain at least one uppercase letter.")
+    
+    if not has_lowercase:
+        issues.append("Password must contain at least one lowercase letter.")
+    
+    if not has_digit:
+        issues.append("Password must contain at least one digit.")
+
+    if not has_special:
+        issues.append("Password must contain at least one special character.")
 
     elif has_uppercase and has_lowercase and has_digit and has_special and len(password) >= 8:
         return "Strong Password: password meets all criteria"
-    
+
+
 print(password_checker(password))
+for x in issues:
+    print("Suggestions - ", x)
