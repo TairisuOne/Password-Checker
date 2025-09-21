@@ -16,7 +16,7 @@ def password_checker(password):
     has_special = any(char in special_char for char in password)
 
     if len(password) < 8:
-        issues.append("Weak Password: too short. Must me a minimum of 8 characters long.")
+        issues.append("Weak Password: too short. Must be a minimum of 8 characters long.")
 
     if not has_uppercase:
         issues.append("Password must contain at least one uppercase letter.")
