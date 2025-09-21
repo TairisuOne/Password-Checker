@@ -3,19 +3,18 @@ special_char = "!@#$%^&*()<>?,.:;"
 
 password = input("Enter a password: ")
 
+has_uppercase = any(char.isupper() for char in password)
+
+has_lowercase = any(char.islower() for char in password)
+
+has_digit = any(char.isdigit() for char in password)
+
+has_special = any(char in special_char for char in password)
+
 if len(password) < 8:
     print("Weak Password: too short")
 
-if any(char.isupper() for char in password):
-    print("Password Contains at least 1 uppercase letter")
-
-if any(char.islower() for char in password):
-    print(True)
-
-if any(char.isdigit() for char in password):
-    print(True)
-
-if any(char in special_char for char in password):
-    print(True)
+elif has_uppercase and has_lowercase and has_digit and has_special and len(password) >= 8:
+    print("Strong Password: password meets all criteria")
     
 print(password)
