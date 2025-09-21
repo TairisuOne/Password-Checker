@@ -1,6 +1,6 @@
 ## Introduction
 
-a password checker that evaluates the strenght of any given password, ensuring it meets the following criteria:
+a password checker that evaluates the strength of any given password, ensuring it meets the following criteria:
 
 1. A minimum of 8 characters long.
 2. Contains at least 1 uppercase letter
@@ -14,10 +14,13 @@ a password checker that evaluates the strenght of any given password, ensuring i
 
 1. Install Python version 3.0 or higher
 2. (Optional) Install Optional dependencies if stated
+3. Clone the repository
 
 
 ## Features
-
+1. criteria check
+2. password strength indicator
+3. Provides clear suggestions for weak password
 
 ## Usage
 
