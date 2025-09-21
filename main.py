@@ -1,5 +1,5 @@
 
-
+special_char = "!@#$%^&*()<>?,.:;"
 
 password = input("Enter a password: ")
 
@@ -15,4 +15,7 @@ if any(char.islower() for char in password):
 if any(char.isdigit() for char in password):
     print(True)
 
+if any(char in special_char for char in password):
+    print(True)
+    
 print(password)
