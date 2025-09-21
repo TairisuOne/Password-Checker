@@ -1,7 +1,6 @@
 
 special_char = "!@#$%^&*()<>?,.:;" # variable that hold special characters that need to be present in password
 
-password = input("Enter a password to check strength: ") # asks for the user input - regarding password
 
 def password_checker(password): # reusable code that can be called upon 
 
@@ -16,7 +15,7 @@ def password_checker(password): # reusable code that can be called upon
     has_special = any(char in special_char for char in password)
 
     if len(password) < 8: 
-        issues.append("Weak Password: too short. Must be a minimum of 8 characters long.")
+        issues.append("Must be a minimum of 8 characters long.")
 
     if not has_uppercase:
         issues.append("Password must contain at least one uppercase letter.")
@@ -35,9 +34,16 @@ def password_checker(password): # reusable code that can be called upon
 
     return "Weak password", issues
 
-strength, issues = password_checker(password)
+while True:
+    password = input("Enter a password to check strength (or type 'q' to quit): ") # asks for the user input - regarding password
 
-print("Strenght: ", strength)
+    if password.lower() == "q":
+        break
+    
 
-for x in issues: # a loop that runs thru issues one at a time
-    print("Suggestions - ", x)
+    strength, issues = password_checker(password)
+
+    print("Strenght: ", strength)
+
+    for x in issues: # a loop that runs thru issues one at a time
+        print("Suggestions - ", x)
