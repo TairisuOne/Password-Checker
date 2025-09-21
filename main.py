@@ -1,11 +1,11 @@
 
 special_char = "!@#$%^&*()<>?,.:;"
-issues = []
 
 password = input("Enter a password to check strength: ")
 
 def password_checker(password):
 
+    issues = []
 
     has_uppercase = any(char.isupper() for char in password)
 
@@ -35,5 +35,6 @@ def password_checker(password):
 
 
 print(password_checker(password))
+
 for x in issues:
     print("Suggestions - ", x)
