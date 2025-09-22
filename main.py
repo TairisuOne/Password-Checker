@@ -46,8 +46,8 @@ while True: # loops through the password checker until user decides to quit
 
     strength, issues = password_checker(password) # run password_checker here
     print("----Password Check----")
-    
-    print("Strenght: ", strength)
+
+    print("Strength: ", strength)
 
     for x in issues: # a loop that runs thru issues one at a time
         print("Suggestions - ", x)
