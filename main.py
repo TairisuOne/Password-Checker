@@ -35,14 +35,18 @@ def password_checker(password): # reusable code that can be called upon
     return "Weak password", issues
 
 while True: # loops through the password checker until user decides to quit
+
+    print("-"*30)
     password = input("Enter a password to check strength (or type 'q' to quit): ") # asks for the user input - regarding password
+    print("-"*30, "\n")
 
     if password.lower() == "q":
         break
     
 
     strength, issues = password_checker(password) # run password_checker here
-
+    print("----Password Check----")
+    
     print("Strenght: ", strength)
 
     for x in issues: # a loop that runs thru issues one at a time
