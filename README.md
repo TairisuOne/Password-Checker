@@ -9,6 +9,7 @@ a password checker that evaluates the strength of any given password, ensuring i
 5. Contains at least 1 special character
 
 ## Demo
+![Password Checker](Demo_PasswordChecker.gif)
 
 ## Installation
 
